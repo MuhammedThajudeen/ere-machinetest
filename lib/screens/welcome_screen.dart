@@ -75,8 +75,11 @@ class welcomescreen extends StatelessWidget {
                                     builder: (context) => signinscreen()));
                           },
                           child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
+                              SizedBox(
+                                width: 20,
+                              ),
                               Text('GET STARTED',
                                   style: GoogleFonts.overpass(
                                       fontSize: 13, color: Colors.white)),

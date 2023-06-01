@@ -20,7 +20,7 @@ class bgcontainer extends StatelessWidget {
       child: Stack(
         children: [
           Positioned(
-              top: 77,
+              top: 50,
               left: 137,
               right: 138,
               child: Image(image: AssetImage('assets/logo.jpg'))),
