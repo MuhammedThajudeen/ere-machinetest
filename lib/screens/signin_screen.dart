@@ -1,5 +1,6 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
+import 'package:ere_machinetest/screens/signup_screen.dart';
 import 'package:ere_machinetest/widgets/background_container.dart';
 import 'package:ere_machinetest/widgets/button.dart';
 import 'package:flutter/material.dart';
@@ -104,6 +105,7 @@ class signinscreen extends StatelessWidget {
                       padding: EdgeInsets.only(left: 27, right: 27),
                       child: button(
                         buttontext: 'Sign In',
+                        routescreen: signup(),
                       ),
                     ),
                     SizedBox(
@@ -111,11 +113,20 @@ class signinscreen extends StatelessWidget {
                     ),
                     Container(
                       padding: EdgeInsets.only(bottom: 0),
-                      child: Text(
-                        "Don 't have an account yet? Sign Up",
-                        style: TextStyle(
-                            fontSize: 12,
-                            color: Color.fromARGB(255, 41, 79, 177)),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            "Don't have an account yet? ",
+                            style: TextStyle(fontSize: 12, color: Colors.black),
+                          ),
+                          Text(
+                            "Sign Up",
+                            style: TextStyle(
+                                fontSize: 12,
+                                color: Color.fromARGB(255, 41, 79, 177)),
+                          ),
+                        ],
                       ),
                     ),
                   ],

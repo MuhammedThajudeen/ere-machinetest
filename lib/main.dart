@@ -1,4 +1,6 @@
+import 'package:ere_machinetest/screens/home.dart';
 import 'package:ere_machinetest/screens/signin_screen.dart';
+import 'package:ere_machinetest/screens/signup_screen.dart';
 import 'package:ere_machinetest/screens/welcome_screen.dart';
 import 'package:flutter/material.dart';
 
