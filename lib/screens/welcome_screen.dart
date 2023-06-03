@@ -1,10 +1,11 @@
 // ignore_for_file: camel_case_types, prefer_const_constructors, prefer_const_literals_to_create_immutables
 
+import 'package:ere_machinetest/screens/home.dart';
 import 'package:ere_machinetest/screens/signin_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
-
+import 'package:ere_machinetest/widgets/arrow_button.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class welcomescreen extends StatelessWidget {
@@ -57,40 +58,16 @@ class welcomescreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Container(
-                        padding: EdgeInsets.only(top: 20, left: 27, right: 27),
-                        child: TextButton(
-                          style: ButtonStyle(
-                              shape: MaterialStatePropertyAll(
-                                  RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(30))),
-                              fixedSize:
-                                  MaterialStatePropertyAll(Size.fromHeight(49)),
-                              backgroundColor: MaterialStatePropertyAll(
-                                  Color.fromARGB(255, 41, 79, 177))),
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => signinscreen()));
-                          },
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              SizedBox(
-                                width: 20,
-                              ),
-                              Text('GET STARTED',
-                                  style: GoogleFonts.overpass(
-                                      fontSize: 13, color: Colors.white)),
-                              Icon(
-                                Icons.arrow_forward,
-                                size: 24,
-                                color: Colors.white,
-                              )
-                            ],
-                          ),
-                        ))
+                    arrowbutton(
+                      routescreen: signinscreen(),
+                      buttonname: 'Get Started',
+                      fontstyle: GoogleFonts.overpass(
+                          fontSize: 13,
+                          fontWeight: FontWeight.w800,
+                          color: Colors.white),
+                      topvalue: 20,
+                      bottomvalue: 32,
+                    )
                   ],
                 ),
               ))

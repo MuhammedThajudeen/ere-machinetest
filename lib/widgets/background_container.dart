@@ -34,6 +34,9 @@ class bgcontainer extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                     color: Colors.white),
               )),
+          SizedBox(
+            height: 10,
+          ),
           Positioned(
               top: 289,
               left: 35,
