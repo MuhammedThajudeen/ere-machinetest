@@ -54,7 +54,12 @@ class home extends StatelessWidget {
               width: MediaQuery.of(context).size.width,
               height: 207,
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(25), color: Colors.blue),
+                  gradient: LinearGradient(colors: [
+                    Color.fromARGB(255, 40, 77, 173),
+                    Color.fromARGB(255, 15, 52, 147)
+                  ]),
+                  borderRadius: BorderRadius.circular(25),
+                  color: Colors.blue),
               child: Column(
                 children: [
                   Container(
@@ -87,7 +92,10 @@ class home extends StatelessWidget {
                         onPressed: () {},
                         child: Text(
                           'Apply',
-                          style: TextStyle(color: Colors.blue, fontSize: 15),
+                          style: GoogleFonts.robotoFlex(
+                              fontSize: 15,
+                              fontWeight: FontWeight.w400,
+                              color: Color.fromARGB(255, 37, 74, 170)),
                         )),
                   ),
                 ],

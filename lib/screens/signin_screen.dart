@@ -6,6 +6,7 @@ import 'package:ere_machinetest/widgets/button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class signinscreen extends StatelessWidget {
   const signinscreen({super.key, req});
@@ -48,16 +49,23 @@ class signinscreen extends StatelessWidget {
                       height: 16,
                     ),
                     Container(
-                      margin: EdgeInsets.only(left: 42, right: 42),
-                      padding: EdgeInsets.only(left: 16),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        color: Color.fromARGB(255, 241, 241, 241),
-                      ),
-                      alignment: Alignment.centerLeft,
-                      height: 44,
-                      child: Text('Enter your phone number'),
-                    ),
+                        margin: EdgeInsets.only(left: 42, right: 42),
+                        padding: EdgeInsets.only(left: 16, bottom: 9),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Color.fromARGB(255, 241, 241, 241),
+                        ),
+                        height: 44,
+                        child: TextField(
+                          keyboardType: TextInputType.number,
+                          decoration: InputDecoration(
+                              border: InputBorder.none,
+                              hintText: 'Enter your phone number',
+                              hintStyle: GoogleFonts.robotoFlex(
+                                  fontSize: 11,
+                                  fontWeight: FontWeight.w400,
+                                  color: Color.fromARGB(255, 198, 198, 198))),
+                        )),
                     SizedBox(
                       height: 15,
                     ),
@@ -71,9 +79,22 @@ class signinscreen extends StatelessWidget {
                       alignment: Alignment.centerLeft,
                       height: 44,
                       child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: const [
-                          Text('Enter your password'),
+                        children: [
+                          Expanded(
+                            child: Padding(
+                              padding: const EdgeInsets.only(bottom: 9),
+                              child: TextField(
+                                decoration: InputDecoration(
+                                    border: InputBorder.none,
+                                    hintText: 'Enter your password',
+                                    hintStyle: GoogleFonts.robotoFlex(
+                                        fontSize: 11,
+                                        fontWeight: FontWeight.w400,
+                                        color: Color.fromARGB(
+                                            255, 198, 198, 198))),
+                              ),
+                            ),
+                          ),
                           Icon(
                             Icons.remove_red_eye,
                             size: 16,

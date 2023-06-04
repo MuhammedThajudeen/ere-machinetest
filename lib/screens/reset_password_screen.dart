@@ -59,11 +59,16 @@ class resetpasswordscreen extends StatelessWidget {
                       ),
                       alignment: Alignment.centerLeft,
                       height: 44,
-                      child: Text('Enter OTP',
-                          style: GoogleFonts.robotoFlex(
-                              fontSize: 11,
-                              fontWeight: FontWeight.w400,
-                              color: Color.fromARGB(255, 198, 198, 198))),
+                      child: TextField(
+                        keyboardType: TextInputType.number,
+                        decoration: InputDecoration(
+                            border: InputBorder.none,
+                            hintText: 'Enter OTP',
+                            hintStyle: GoogleFonts.robotoFlex(
+                                fontSize: 11,
+                                fontWeight: FontWeight.w400,
+                                color: Color.fromARGB(255, 198, 198, 198))),
+                      ),
                     ),
                     SizedBox(
                       height: 18,
@@ -79,13 +84,22 @@ class resetpasswordscreen extends StatelessWidget {
                       alignment: Alignment.centerLeft,
                       height: 44,
                       child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text('Create your password',
-                              style: GoogleFonts.robotoFlex(
-                                  fontSize: 11,
-                                  fontWeight: FontWeight.w400,
-                                  color: Color.fromARGB(255, 198, 198, 198))),
+                          Expanded(
+                            child: Padding(
+                              padding: const EdgeInsets.only(bottom: 9),
+                              child: TextField(
+                                decoration: InputDecoration(
+                                    border: InputBorder.none,
+                                    hintText: 'Create new password',
+                                    hintStyle: GoogleFonts.robotoFlex(
+                                        fontSize: 11,
+                                        fontWeight: FontWeight.w400,
+                                        color: Color.fromARGB(
+                                            255, 198, 198, 198))),
+                              ),
+                            ),
+                          ),
                           Icon(
                             Icons.remove_red_eye,
                             size: 16,
@@ -115,11 +129,21 @@ class resetpasswordscreen extends StatelessWidget {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text('Re-enter your password',
-                              style: GoogleFonts.robotoFlex(
-                                  fontSize: 11,
-                                  fontWeight: FontWeight.w400,
-                                  color: Color.fromARGB(255, 198, 198, 198))),
+                          Expanded(
+                            child: Padding(
+                              padding: const EdgeInsets.only(bottom: 9),
+                              child: TextField(
+                                decoration: InputDecoration(
+                                    border: InputBorder.none,
+                                    hintText: 'Re-enter your password',
+                                    hintStyle: GoogleFonts.robotoFlex(
+                                        fontSize: 11,
+                                        fontWeight: FontWeight.w400,
+                                        color: Color.fromARGB(
+                                            255, 198, 198, 198))),
+                              ),
+                            ),
+                          ),
                           Icon(
                             Icons.remove_red_eye,
                             size: 16,

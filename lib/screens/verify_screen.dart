@@ -53,18 +53,23 @@ class verifyscreen extends StatelessWidget {
                     ),
                     Container(
                       margin: EdgeInsets.only(left: 42, right: 42),
-                      padding: EdgeInsets.only(left: 16),
+                      padding: EdgeInsets.only(left: 16, bottom: 9),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
                         color: Color.fromARGB(255, 241, 241, 241),
                       ),
                       alignment: Alignment.centerLeft,
                       height: 44,
-                      child: Text('Enter OTP',
-                          style: GoogleFonts.robotoFlex(
-                              fontSize: 11,
-                              fontWeight: FontWeight.w400,
-                              color: Color.fromARGB(255, 198, 198, 198))),
+                      child: TextField(
+                        keyboardType: TextInputType.number,
+                        decoration: InputDecoration(
+                            border: InputBorder.none,
+                            hintText: 'Enter OTP',
+                            hintStyle: GoogleFonts.robotoFlex(
+                                fontSize: 11,
+                                fontWeight: FontWeight.w400,
+                                color: Color.fromARGB(255, 198, 198, 198))),
+                      ),
                     ),
                     SizedBox(
                       height: 18,
@@ -80,13 +85,22 @@ class verifyscreen extends StatelessWidget {
                       alignment: Alignment.centerLeft,
                       height: 44,
                       child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text('Create your password',
-                              style: GoogleFonts.robotoFlex(
-                                  fontSize: 11,
-                                  fontWeight: FontWeight.w400,
-                                  color: Color.fromARGB(255, 198, 198, 198))),
+                          Expanded(
+                            child: Padding(
+                              padding: const EdgeInsets.only(bottom: 9),
+                              child: TextField(
+                                decoration: InputDecoration(
+                                    border: InputBorder.none,
+                                    hintText: 'Create your password',
+                                    hintStyle: GoogleFonts.robotoFlex(
+                                        fontSize: 11,
+                                        fontWeight: FontWeight.w400,
+                                        color: Color.fromARGB(
+                                            255, 198, 198, 198))),
+                              ),
+                            ),
+                          ),
                           Icon(
                             Icons.remove_red_eye,
                             size: 16,
@@ -116,11 +130,21 @@ class verifyscreen extends StatelessWidget {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text('Re-enter your password',
-                              style: GoogleFonts.robotoFlex(
-                                  fontSize: 11,
-                                  fontWeight: FontWeight.w400,
-                                  color: Color.fromARGB(255, 198, 198, 198))),
+                          Expanded(
+                            child: Padding(
+                              padding: const EdgeInsets.only(bottom: 9),
+                              child: TextField(
+                                decoration: InputDecoration(
+                                    border: InputBorder.none,
+                                    hintText: 'Re-enter your password',
+                                    hintStyle: GoogleFonts.robotoFlex(
+                                        fontSize: 11,
+                                        fontWeight: FontWeight.w400,
+                                        color: Color.fromARGB(
+                                            255, 198, 198, 198))),
+                              ),
+                            ),
+                          ),
                           Icon(
                             Icons.remove_red_eye,
                             size: 16,

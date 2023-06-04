@@ -50,38 +50,46 @@ class signup extends StatelessWidget {
                       height: 16,
                     ),
                     Container(
-                      margin: EdgeInsets.only(left: 42, right: 42),
-                      padding: EdgeInsets.only(left: 16),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        color: Color.fromARGB(255, 241, 241, 241),
-                      ),
-                      alignment: Alignment.centerLeft,
-                      height: 44,
-                      child: Text('Enter your full name',
-                          style: GoogleFonts.robotoFlex(
-                              fontSize: 11,
-                              fontWeight: FontWeight.w400,
-                              color: Color.fromARGB(255, 198, 198, 198))),
-                    ),
+                        margin: EdgeInsets.only(left: 42, right: 42),
+                        padding: EdgeInsets.only(left: 16, bottom: 9),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Color.fromARGB(255, 241, 241, 241),
+                        ),
+                        alignment: Alignment.centerLeft,
+                        height: 44,
+                        child: TextField(
+                          decoration: InputDecoration(
+                              border: InputBorder.none,
+                              hintText: 'Enter your full name',
+                              hintStyle: GoogleFonts.robotoFlex(
+                                  fontSize: 11,
+                                  fontWeight: FontWeight.w400,
+                                  color: Color.fromARGB(255, 198, 198, 198))),
+                        )),
                     SizedBox(
                       height: 15,
                     ),
                     Container(
-                      margin: EdgeInsets.only(left: 42, right: 42),
-                      padding: EdgeInsets.only(left: 16, right: 16),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        color: Color.fromARGB(255, 241, 241, 241),
-                      ),
-                      alignment: Alignment.centerLeft,
-                      height: 44,
-                      child: Text('Enter your email id',
-                          style: GoogleFonts.robotoFlex(
-                              fontSize: 11,
-                              fontWeight: FontWeight.w400,
-                              color: Color.fromARGB(255, 198, 198, 198))),
-                    ),
+                        margin: EdgeInsets.only(left: 42, right: 42),
+                        padding:
+                            EdgeInsets.only(left: 16, right: 16, bottom: 9),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Color.fromARGB(255, 241, 241, 241),
+                        ),
+                        alignment: Alignment.centerLeft,
+                        height: 44,
+                        child: TextField(
+                          keyboardType: TextInputType.emailAddress,
+                          decoration: InputDecoration(
+                              border: InputBorder.none,
+                              hintText: 'Enter your email id',
+                              hintStyle: GoogleFonts.robotoFlex(
+                                  fontSize: 11,
+                                  fontWeight: FontWeight.w400,
+                                  color: Color.fromARGB(255, 198, 198, 198))),
+                        )),
                     SizedBox(
                       height: 15,
                     ),
@@ -109,11 +117,22 @@ class signup extends StatelessWidget {
                               Icons.arrow_drop_down,
                               color: Colors.black,
                             ),
-                            Text('Enter your phone number',
-                                style: GoogleFonts.robotoFlex(
-                                    fontSize: 11,
-                                    fontWeight: FontWeight.w400,
-                                    color: Color.fromARGB(255, 198, 198, 198)))
+                            Expanded(
+                              child: Padding(
+                                padding: const EdgeInsets.only(bottom: 9),
+                                child: TextField(
+                                  keyboardType: TextInputType.number,
+                                  decoration: InputDecoration(
+                                      border: InputBorder.none,
+                                      hintText: 'Enter your phone number',
+                                      hintStyle: GoogleFonts.robotoFlex(
+                                          fontSize: 11,
+                                          fontWeight: FontWeight.w400,
+                                          color: Color.fromARGB(
+                                              255, 198, 198, 198))),
+                                ),
+                              ),
+                            )
                           ],
                         )),
 
@@ -140,7 +159,7 @@ class signup extends StatelessWidget {
                             style: TextStyle(fontSize: 12, color: Colors.black),
                           ),
                           Text(
-                            "Sign Up",
+                            "Sign in",
                             style: TextStyle(
                                 fontSize: 12,
                                 color: Color.fromARGB(255, 41, 79, 177)),
