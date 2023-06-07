@@ -73,7 +73,7 @@ class resetpasswordscreen extends StatelessWidget {
                     SizedBox(
                       height: 18,
                     ),
-                    //create password
+                    //create new password
                     Container(
                       margin: EdgeInsets.only(left: 42, right: 42),
                       padding: EdgeInsets.only(left: 16, right: 16),
@@ -169,8 +169,6 @@ class resetpasswordscreen extends StatelessWidget {
                       topvalue: 24,
                       bottomvalue: 34,
                     ),
-
-                    //bottom signup text
                   ],
                 ),
               ))
