@@ -145,15 +145,19 @@ class home extends StatelessWidget {
       bottomNavigationBar: ClipRRect(
         borderRadius: BorderRadius.only(
             topLeft: Radius.circular(22), topRight: Radius.circular(22)),
-        child: BottomNavigationBar(currentIndex: 1, items: [
-          BottomNavigationBarItem(icon: Icon(Icons.notifications), label: ''),
-          BottomNavigationBarItem(
-              icon: Icon(
-                Icons.home,
-              ),
-              label: ''),
-          BottomNavigationBarItem(icon: Icon(Icons.person), label: '')
-        ]),
+        child: BottomNavigationBar(
+            backgroundColor: Colors.grey.shade200,
+            currentIndex: 1,
+            items: [
+              BottomNavigationBarItem(
+                  icon: Icon(Icons.notifications), label: ''),
+              BottomNavigationBarItem(
+                  icon: Icon(
+                    Icons.home,
+                  ),
+                  label: ''),
+              BottomNavigationBarItem(icon: Icon(Icons.person), label: '')
+            ]),
       ),
     );
   }
