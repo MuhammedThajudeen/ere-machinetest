@@ -22,8 +22,7 @@ class homecontainer extends StatelessWidget {
           Container(
             margin: EdgeInsets.only(top: 15, left: 14, right: 14),
             height: 93,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10)),
+            decoration: BoxDecoration(borderRadius: BorderRadius.circular(10)),
             child: ClipRRect(
               borderRadius: BorderRadius.circular(10),
               child: Image(
